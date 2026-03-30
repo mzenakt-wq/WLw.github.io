@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性骚扰立法的中国经验与前景展望</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0a2342;
+            --paper: #f8f5f0;
+            --thesis: #fff350;
+            --term: #ff4d4f;
+            --evidence: #40a9ff;
+            --concession: #52c41a;
+            --method: #722ed1;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: var(--paper);
+            color: #111;
+            line-height: 1.6;
+        }
+
+        .top-nav {
+            background-color: var(--navy);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .top-nav h1 {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .top-nav .course {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .legend {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .legend span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .legend b {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+        }
+
+        .thesis {
+            background-color: var(--thesis);
+        }
+
+        .term {
+            background-color: var(--term);
+        }
+
+        .evidence {
+            background-color: var(--evidence);
+        }
+
+        .concession {
+            background-color: var(--concession);
+        }
+
+        .method {
+            background-color: var(--method);
+        }
+
+        .chapter-nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 0.75rem 2rem;
+            display: flex;
+            gap: 1.25rem;
+            overflow-x: auto;
+            z-index: 100;
+        }
+
+        .chapter-nav a {
+            white-space: nowrap;
+            text-decoration: none;
+            color: var(--navy);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .chapter-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .original {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .original p {
+            margin-bottom: 1rem;
+        }
+
+        .original mark {
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+
+        .mark-thesis {
+            background-color: var(--thesis);
+        }
+
+        .mark-term {
+            background-color: var(--term);
+        }
+
+        .mark-evidence {
+            background-color: var(--evidence);
+        }
+
+        .mark-concession {
+            background-color: var(--concession);
+        }
+
+        .mark-method {
+            background-color: var(--method);
+        }
+
+        .annotation {
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+        }
+
+        .anno-card {
+            background: white;
+            border-left: 4px solid var(--navy);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .anno-card h4 {
+            font-size: 0.95rem;
+            color: var(--navy);
+            margin-bottom: 0.3rem;
+        }
+
+        .anno-card p {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 0.4rem;
+        }
+
+        .overview {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .overview h2 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .overview .skeleton {
+            margin: 1rem 0;
+            padding-left: 1rem;
+            border-left: 3px solid var(--navy);
+        }
+
+        .strength-weak {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .strength-weak {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <h1>性骚扰立法的中国经验与前景展望</h1>
+        <div class="course">学术论文结构分析 | 法理学与立法学专题</div>
+        <div class="legend">
+            <span><b class="thesis"></b> 核心论点</span>
+            <span><b class="term"></b> 关键概念/术语</span>
+            <span><b class="evidence"></b> 实证证据/数据</span>
+            <span><b class="concession"></b> 让步/反驳</span>
+            <span><b class="method"></b> 方法论</span>
+        </div>
+    </div>
+
+    <div class="chapter-nav">
+        <a href="#abstract">摘要</a>
+        <a href="#intro">引言</a>
+        <a href="#part1">一、问题导向的性骚扰立法</a>
+        <a href="#part2">二、立法经验与模式</a>
+        <a href="#part3">三、趋势与前景</a>
+        <a href="#conclusion">结语</a>
+    </div>
+
+    <div class="container">
+        <div class="original" id="content">
+            <p id="abstract"><mark class="mark-thesis">开端于20世纪80年代末期的性骚扰立法动议，经由地方立法试验、人大代表提案、群团组织推动、司法经验积累和国际社会关注，促使立法机关在2005年修改《妇女权益保障法》时增加规定“禁止对妇女实施性骚扰”</mark>，然而，<mark class="mark-concession">在对性骚扰概念作出立法界定，以及对特定场所性骚扰的强化规制等方面尚不能满足现实需求</mark>。<mark class="mark-thesis">2020年，《民法典》明确了性骚扰的概念和构成要件，确立了特定场所防治性骚扰的义务，形成了开放式条文结构，引导了后续《未成年人保护法》和《妇女权益保障法》的修改</mark>。<mark class="mark-thesis">总结中国性骚扰立法的经验模式，其呈现鲜明的民意回应型、多级分工式、经验导向性和话语嵌入式特征</mark>。<mark class="mark-thesis">由此展望中国性骚扰立法前景，有望转向引导型立法模式，弥合现有法律体系的内部罅隙，继续积累性骚扰立法的中国经验，并嵌入国家和社会的主流话语</mark>。</p>
+
+            <p id="intro"><mark class="mark-method">本文主要采用历史叙事而非规范研究的方法，旨在展示规范变迁背后的社会动力机制，总结中国性骚扰立法的行动策略（而非具体技术细节），并据此前瞻其发展趋势与制度前景</mark>。</p>
+
+            <p id="part1"><mark class="mark-term">1989年《妇女权益保障法》起草小组曾提议纳入性骚扰条款，但未获支持</mark>。<mark class="mark-concession">彼时性骚扰作为社会问题尚未被普遍接纳，立法资源优先用于解决拐卖妇女、就业困难等更急迫问题</mark>。<mark class="mark-evidence">1992年法律授权省级人大制定实施办法，为地方先行先试预留通道</mark>。</p>
+
+            <p><mark class="mark-evidence">1994年《湖北省实施〈妇女权益保障法〉办法》首次明确“禁止对妇女进行性骚扰”，是中国法律体系首次正式写入性骚扰概念</mark>。<mark class="mark-evidence">1998-1999年人大代表提案制定反性骚扰法，但因司法经验不足未进入立法程序</mark>。</p>
+
+            <p><mark class="mark-evidence">2001年西安性骚扰案因证据不足败诉，2002年武汉性骚扰案胜诉形成完整证据链</mark>，<mark class="mark-thesis">司法案件积累倒逼立法完善</mark>。<mark class="mark-evidence">2005年《妇女权益保障法》修订增设禁止性骚扰条款，但未明确定义与单位责任</mark>。</p>
+
+            <p><mark class="mark-thesis">2020年《民法典》第1010条系统解决定义与单位义务问题，形成开放式结构，激活后续立法</mark>。<mark class="mark-evidence">《未成年人保护法》《妇女权益保障法》修订均跟进完善</mark>，<mark class="mark-term">形成“一部法典、多部法律、一部特别规定、多部地方性法规”的体系</mark>。</p>
+
+            <p id="part2"><mark class="mark-thesis">中国性骚扰立法具备四大特征：民意回应型、多级分工式、经验导向性、话语嵌入式</mark>。</p>
+
+            <p><mark class="mark-thesis">民意回应型：立法节奏与社会接受度同步，经历命名、接受、发展、成熟四阶段</mark>。<mark class="mark-concession">立法机关不盲目推进，审慎评估时机与条件</mark>。</p>
+
+            <p><mark class="mark-thesis">多级分工式：依托“一元两级多层”立法体制，地方先行、中央提炼，法典与单行法分工配合</mark>。<mark class="mark-evidence">深圳、湖北率先试点，2012年《女职工劳动保护特别规定》明确单位义务</mark>。</p>
+
+            <p><mark class="mark-thesis">经验导向性：以实践积累为前提，争议条款（如雇主责任）逐步试探、不冒进</mark>。<mark class="mark-concession">多地尝试雇主连带责任，但因缺乏案例与共识未被全国立法采纳</mark>。</p>
+
+            <p><mark class="mark-thesis">话语嵌入式：先后嵌入社会保护、人权尊严、性自主权主流话语，获取正当性与推动力</mark>。</p>
+
+            <p id="part3"><mark class="mark-thesis">未来将从回应型转向引导型立法，强化前瞻性、覆盖新业态、激活单位责任</mark>。<mark class="mark-thesis">需弥合体系罅隙：研究专门立法、完善行政法规、发挥规章与司法解释作用</mark>。<mark class="mark-thesis">继续立足中国经验、积累司法实践、嵌入主流法治话语</mark>。</p>
+
+            <p id="conclusion"><mark class="mark-thesis">中国性骚扰立法近30年从地方到中央、从粗疏到严密，以现实问题驱动、经验积累推进，未来将延续既有路径，完善技术细节，实现反性骚扰法治升级</mark>。</p>
+        </div>
+
+        <div class="annotation">
+            <div class="anno-card">
+                <h4>段落功能：摘要总起</h4>
+                <p>逻辑角色：提出全文核心论点，划定研究范围</p>
+                <p>技巧：先肯定进步再指出不足，形成张力；用四个特征概括经验，高度凝练</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：方法论声明</h4>
+                <p>逻辑角色：明确研究路径，限定论证边界</p>
+                <p>技巧：主动区分“历史叙事”与“规范研究”，避免细节纠缠，聚焦宏观结构</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：早期立法尝试梳理</h4>
+                <p>逻辑角色：回溯起点，解释立法滞后的合理性</p>
+                <p>技巧：用让步句增强说服力，说明当时资源优先级合理</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：地方立法突破与国家层面动议</h4>
+                <p>逻辑角色：提供关键时间线证据，证明自下而上推动</p>
+                <p>技巧：以“首次”“率先”强化节点意义，突出地方试验价值</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：司法实践推动国家立法</h4>
+                <p>逻辑角色：连接司法与立法，证明经验导向</p>
+                <p>技巧：胜负案例对比，凸显立法缺失的现实困境</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：民法典里程碑意义</h4>
+                <p>逻辑角色：完成立法阶段总结，提出体系概念</p>
+                <p>技巧：用“开放式结构”定位民法典功能，为后续立法铺垫</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：经验模式总括</h4>
+                <p>逻辑角色：承上启下，从事实描述转向理论提炼</p>
+                <p>技巧：四字结构概括特征，便于记忆与展开</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：民意回应型特征阐释</h4>
+                <p>逻辑角色：分论点1展开，解释立法与社会的互动</p>
+                <p>技巧：四阶段划分清晰，呈现渐进理性</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：多级分工式特征阐释</h4>
+                <p>逻辑角色：分论点2展开，解释中国立法体制优势</p>
+                <p>技巧：结合立法体制理论，提升学术性</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：经验导向性特征阐释</h4>
+                <p>逻辑角色：分论点3展开，解释保守渐进逻辑</p>
+                <p>技巧：用雇主责任争议案例，证明“不冒进”的合理性</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：话语嵌入式特征阐释</h4>
+                <p>逻辑角色：分论点4展开，解释话语策略</p>
+                <p>技巧：中外对比，凸显中国本土化路径</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：前景展望与完善路径</h4>
+                <p>逻辑角色：提出对策，升华主题</p>
+                <p>技巧：从模式转型、体系完善、本土经验三方面布局，结构完整</p>
+            </div>
+            <div class="anno-card">
+                <h4>段落功能：全文总结</h4>
+                <p>逻辑角色：收束论证，回应开头</p>
+                <p>技巧：历史脉络闭环，强调路径依赖与未来方向</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="overview">
+        <h2>全文论证结构总览</h2>
+        <div class="skeleton">
+            <strong>逻辑骨架：</strong><br>
+            问题：性骚扰立法长期定义不清、责任不明、体系零散<br>
+            论点：中国立法形成民意回应、多级分工、经验导向、话语嵌入四大模式；未来转向引导型立法<br>
+            证据：地方立法试点、司法案例、修法历程、条文对比、代表提案<br>
+            让步：承认早期定义缺失、雇主责任争议、部分条款操作性不足<br>
+            结论：延续经验路径，完善体系与技术，实现反性骚扰法治升级
+        </div>
+        <p><strong>作者核心主张（一句话）：</strong>中国性骚扰立法近30年走自下而上、经验驱动、渐进完善的道路，形成四大特征，未来应转向引导型立法并补齐体系短板。</p>
+        <div class="strength-weak">
+            <div>
+                <strong>论证最强处：</strong>以完整历史时间线串联立法、司法、社会、国际多重动力，经验归纳扎实可信。
+            </div>
+            <div>
+                <strong>论证最弱处：</strong>对“引导型立法”的具体制度设计与可行性分析偏笼统，缺少可操作方案。
+            </div>
+        </div>
+    </div>
+</body>
+</html>
